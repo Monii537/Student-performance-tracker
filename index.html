@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Student Management CRUD</title>
+    <link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center; margin-top: 20px;">Student Management System</h1>
+    <table>
+        <tr>
+            <td>
+                <form id="studentForm" autocomplete="off" onsubmit="onFormSubmit(event)">
+                    <div>
+                        <label for="StudentID">Student ID</label>
+                        <input type="text" name="StudentID" id="StudentID" required>
+                    </div>
+                    <div>
+                        <label for="Name">Name</label>
+                        <input type="text" name="Name" id="Name" required>
+                    </div>
+                    <div>
+                        <label for="Class">Class</label>
+                        <input type="text" name="Class" id="Class" required>
+                    </div>
+                    <div>
+                        <label for="DesignAnalysis">Design Analysis (out of 100)</label>
+                        <input type="number" name="DesignAnalysis" id="DesignAnalysis" min="0" max="100" required>
+                    </div>
+                    <div>
+                        <label for="AdvancedArchitecture">Advanced Architecture (out of 100)</label>
+                        <input type="number" name="AdvancedArchitecture" id="AdvancedArchitecture" min="0" max="100" required>
+                    </div>
+                    <div>
+                        <label for="FullstackDevelopment">Fullstack Development (out of 100)</label>
+                        <input type="number" name="FullstackDevelopment" id="FullstackDevelopment" min="0" max="100" required>
+                    </div>
+                    <div>
+                        <label for="LinuxOS">Linux OS (out of 100)</label>
+                        <input type="number" name="LinuxOS" id="LinuxOS" min="0" max="100" required>
+                    </div>
+                    <div>
+                        <label for="ProfessionalCommunication">Professional Communication (out of 100)</label>
+                        <input type="number" name="ProfessionalCommunication" id="ProfessionalCommunication" min="0" max="100" required>
+                    </div>
+                    <div class="form-action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+            </td>
+
+            <td>
+                <table class="list" id="storeList">
+                    <thead>
+                        <tr>
+                            <th>Student ID</th>
+                            <th>Student Name</th>
+                            <th>Class</th>
+                            <th>Design & Analysis</th>
+                            <th>Advanced Architecture</th>
+                            <th>Fullstack Dev</th>
+                            <th>Linux OS</th>
+                            <th>Professional Comm</th>
+                            <th>Total (out of 500)</th>
+                            <th>Percentage</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="11" style="text-align:center;">No data available</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
